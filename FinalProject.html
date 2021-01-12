@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinalProject</title>
+  </head>
+  <style>
+    div {
+      display: block;
+      padding: 30px;
+      margin: 30px auto;
+      background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+      border-radius: 10px;
+      width: 50%;
+      font-family: monospace;
+      box-shadow: 0px 8px 8px 0px;
+    }
+    h1 {
+      display: block;
+      padding: 15px;
+      text-align: center;
+      font-size: 40px;
+      color: rgb(76, 121, 206);
+      margin: 5px;
+      border: 1px solid white;
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+      color: rgb(43, 110, 233);
+      margin: 10px;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 50%;
+      border-radius: 10px;
+    }
+    hr {
+      box-shadow: 2px 2px 5px blue;
+    }
+    span {
+      color: cornflowerblue;
+      font-size: 25px;
+    }
+    p {
+      display: block;
+      line-height: 1.5;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button {
+      display: block;
+      color: white;
+      background: rgb(76, 121, 206);
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 10px auto;
+      padding: 20px;
+      font-size: 18px;
+      transition: all 200ms ease-in-out;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    button:hover {
+      background-color: rgb(177, 197, 235);
+      color: rgb(76, 121, 206);
+      opacity: 1;
+    }
+
+    em {
+      display: block;
+      text-align: center;
+      font-size: 15px;
+    }
+  </style>
+  <body>
+    <div>
+      <h1>Parakeets 🐦</h1>
+      <h2>I love parrots especially Parakeets.</h2>
+      <img
+        src="https://www.thesprucepets.com/thmb/xd_yhSrmUvS2wOtAW9VLMSCSzpA=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-629079699-58a6e9755f9b58a3c9190066.jpg"
+        alt="Parakeets"
+      />
+      <hr />
+      <p>
+        <strong>
+          <span> A parakeet </span> is any one of many small to medium-sized
+          species of parrot, in multiple genera, that generally have long tail
+          feathers.
+          <br />
+          In American English, the word parakeet usually refers to the
+          budgerigar. The budgerigar is a species of parakeet. They are
+          notoriously good talkers. But their voices are very soft and they tend
+          to talk rapidly so you might not recognize the fact that your budgie
+          does indeed have a wonderful vocabulary.
+        </strong>
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Parakeet" target="_blank">
+        More on wikipedia
+      </a>
+      <button>Buy parakeet</button>
+
+      <em>Coded by Ekaterina Ivanchenko</em>
+    </div>
+    <script>
+      function buyParakeet() {
+        let name = prompt("What is your name?");
+        let heading = document.querySelector("h1");
+        let love = prompt("Do you love parakeet?");
+        if (love === "yes") {
+          prompt("What is your email?");
+          heading.innerHTML = "Hello " + name + ", we'll in touch! 🤩";
+        } else {
+          alert("Hello " + name + ", I'm so sorry 💔!");
+        }
+      }
+      let buttonBuy = document.querySelector("button");
+      buttonBuy.addEventListener("click", buyParakeet);
+    </script>
+  </body>
+</html>
